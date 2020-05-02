@@ -7,35 +7,34 @@ const SongDetailsPage = (props) => {
     "<br />"
   );
   return (
-    <MDBContainer className="mt-4 text-center">
+    <MDBContainer className="mt-3 text-center">
       <MDBRow>
         <MDBCol>
-          <h3>
-            {" "}
-            <strong> {props.location.state.song.name + "\n\n"} </strong>
-          </h3>
+          <div className="mt-7">
+            <h5>
+              <strong> {props.location.state.song.name} </strong>
+            </h5>
+          </div>
         </MDBCol>
       </MDBRow>
       {/* <div class="col-lg-8 d-none d-lg-block"></div> */}
-      <MDBRow className="d-none d-sm-block d-md-none">
+      {/* <MDBRow className="d-none d-sm-block d-md-none">
         <MDBCol>
           <h4>
             {" "}
             <strong> Tamil version </strong>
           </h4>
         </MDBCol>
-      </MDBRow>
+      </MDBRow> */}
 
       <MDBRow>
-        <MDBCol md="6">
+        <MDBCol>
           <MDBCardBody>
-            {/* <MDBCardTitle className="h3">
-              {props.location.state.song.name + "\n\n"}
-            </MDBCardTitle> */}
             <pre>{props.location.state.song.lyrics}</pre>
           </MDBCardBody>
         </MDBCol>
-
+      </MDBRow>
+      {/* 
         <MDBRow className="d-none d-sm-block d-md-none">
           <MDBCol>
             <h4> English version</h4>
@@ -44,13 +43,11 @@ const SongDetailsPage = (props) => {
 
         <MDBCol md="6">
           <MDBCardBody>
-            {/* <MDBCardTitle className="h3">
-              {props.location.state.song.name + "\n\n"}
-            </MDBCardTitle> */}
+            
             <pre>{props.location.state.song.lyrics}</pre>
           </MDBCardBody>
         </MDBCol>
-      </MDBRow>
+      </MDBRow> */}
       <MDBRow>
         <MDBCol>
           <MDBBtn onClick={props.history.goBack} gradient="purple" rounded>

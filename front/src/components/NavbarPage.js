@@ -22,13 +22,13 @@ class NavbarPage extends Component {
   render() {
     return (
       <Router>
-        <MDBNavbar fixed="top" dark expand="md">
+        <MDBNavbar dark expand="md">
           <MDBNavbarBrand className="m1 p0 mx-1">
             <img
               src="../../img/fcm-weblogo.png"
               href="#"
               className="logo-navbar"
-              height="64rem"
+              height="480px"
               alt=" FCM logo"
             />
             <strong> Faith Church Ministries </strong>
