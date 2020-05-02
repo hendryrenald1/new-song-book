@@ -60,7 +60,7 @@ class MainPage extends Component {
     return (
       <Fragment>
         <header id="home-section" className="img-fluid">
-          <div className="dard-overlay">
+          <div className="card-overlay">
             <div className="home-inner container">
               <div className="row">
                 <div className="col">
