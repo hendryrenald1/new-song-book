@@ -8,7 +8,6 @@ import {
   MDBCardBody,
   MDBCardTitle,
 } from "mdbreact";
-import SearchPage from "./SearchPage";
 
 const JumbotronPage = () => {
   return (

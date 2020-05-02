@@ -1,13 +1,4 @@
 import React from "react";
-import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCol,
-} from "mdbreact";
 
 class SongList extends React.Component {
   render() {
@@ -28,18 +19,24 @@ class SongList extends React.Component {
         const classes =
           "songlink" + (this.props.selected === song ? " selectedsong" : "");
         return (
-          // <MDBCol size="auto" key={song._id}>
-          <MDBCard key={song._id}>
-            <MDBCardBody key={song._id}>
-              <MDBCardText
-                key={song._id}
-                onClick={() => this.props.selectSong(song)}
-              >
-                {song.name}
-              </MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
-          // </MDBCol>
+          <li
+            className="list-group-item"
+            key={song._id}
+            onClick={() => this.props.selectSong(song)}
+          >
+            {" "}
+            {song.name}{" "}
+          </li>
+          // <MDBCard key={song._id}>
+          //   <MDBCardBody key={song._id}>
+          //     <MDBCardText
+          //       key={song._id}
+          //       onClick={() => this.props.selectSong(song)}
+          //     >
+          //       {song.name}
+          //     </MDBCardText>
+          //   </MDBCardBody>
+          // </MDBCard>
         );
       });
   }

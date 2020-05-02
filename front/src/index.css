@@ -5,3 +5,44 @@ pre {
 .navbar {
   background-color: #6b2575;
 }
+
+.panel-footer{
+  background-color: #6b2575;
+  border-color: #337ab7;
+  color: #FFFFFF;
+
+ }
+
+#home-section {
+  background: url("/img/song-book-cover.jpg" );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  min-height: 500px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  min-height: 500px;
+  background-color: rgba(0,0,0,0.6);
+
+  
+}
+
+/* .navbar-img {
+  background: url("/img/fcm-weblogo.png" );
+  height: 60px;
+} */
+
+#home-section .home-inner {
+  padding-top: 400px;
+}
+
+img.logo-navbar {
+  width: 2rem !important;
+  height: 2rem !important;
+}

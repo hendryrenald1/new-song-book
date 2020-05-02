@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBBtn, MDBContainer } from "mdbreact";
+import { MDBCol, MDBContainer } from "mdbreact";
 
 class SearchPage extends React.Component {
   state = { display: "none" };
@@ -9,15 +9,23 @@ class SearchPage extends React.Component {
       <>
         <MDBContainer>
           <MDBCol md="12">
-            
-            <input
+            <span className="d-block p-2 bg-dark">
+              <input
+                type="text"
+                className="form-control form-control-lg "
+                name="searchInput"
+                placeholder="Search Songs...."
+                onChange={this.props.handleSearchChange}
+              ></input>
+            </span>
+            {/* <input
               className="form-control"
               type="text"
               placeholder="Enter the song to search...."
               aria-label="Search"
-              name="searchInput"
+            
               onChange={this.props.handleSearchChange}
-            />
+            /> */}
           </MDBCol>
           {/* <MDBBtn href="#" gradient="purple" rounded>
         Search

@@ -18,7 +18,6 @@ const authError = (request) => {
 };
 
 songsRouter.get("/", (request, response) => {
-  console.log("Inside Songs");
   Song.find({}).then((songs) => response.json(songs));
 });
 

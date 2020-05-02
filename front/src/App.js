@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 import MainPage from "./components/MainPage";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import SongDetailsPage from "./components/SongDetailsPage";
 import NavbarPage from "./components/NavbarPage";
+import FooterPage from "./components/FooterPage";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <NavbarPage />
         <Route exact path="/" component={MainPage} />
         <Route exact path="/selectedSong" component={SongDetailsPage} />
+        <FooterPage />
       </>
     );
   }

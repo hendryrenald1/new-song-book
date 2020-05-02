@@ -3,20 +3,7 @@ import React, { Component, Fragment } from "react";
 import AutoCompleteText from "./AutoCompleteText";
 
 import ".././index.css";
-import logo from ".././logo.png";
-import {
-  MDBCarousel,
-  MDBCarouselCaption,
-  MDBCarouselInner,
-  MDBCarouselItem,
-  MDBView,
-  MDBMask,
-  MDBContainer,
-} from "mdbreact";
 import axios from "axios";
-import NavbarPage from "./NavbarPage";
-import FooterPage from "./FooterPage";
-import JumbotronPage from "./JumbotronPage";
 import SongList from "./SongList";
 import SearchPage from "./SearchPage";
 const apiUrl = "/api/songs";
@@ -72,7 +59,17 @@ class MainPage extends Component {
   render() {
     return (
       <Fragment>
-        <MDBContainer size="md" style={{ minHeight: "100vh" }}>
+        <header id="home-section" className="img-fluid">
+          <div className="dard-overlay">
+            <div className="home-inner container">
+              <div className="row">
+                <div className="col">
+                  <div className="form-group">
+                    <SearchPage handleSearchChange={this.handleSearchChange} />
+                  </div>
+                </div>
+
+                {/* <MDBContainer size="md" style={{ minHeight: "100vh" }}>
           <JumbotronPage />
           <SearchPage handleSearchChange={this.handleSearchChange} />
           <SongList
@@ -82,7 +79,26 @@ class MainPage extends Component {
             selectSong={this.selectSong}
           />
         </MDBContainer>
-        <FooterPage />
+         */}
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section id="song-list" className="container">
+          <div className="row">
+            <div className="col">
+              <ul className="list-group my-4">
+                <SongList
+                  songs={this.state.songs}
+                  search={this.state.search}
+                  selected={this.state.selected}
+                  selectSong={this.selectSong}
+                />
+              </ul>
+            </div>
+          </div>
+        </section>
       </Fragment>
     );
   }
