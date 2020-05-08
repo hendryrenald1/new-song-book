@@ -1,6 +1,7 @@
 const songsRouter = require("express").Router();
 const jwt = require("jsonwebtoken");
 const Song = require("../models/Song");
+const Fcmbook = require("../models/fcmbook");
 
 const authError = (request) => {
   const authorization = request.get("authorization");
@@ -18,7 +19,17 @@ const authError = (request) => {
 };
 
 songsRouter.get("/", (request, response) => {
-  Song.find({}).then((songs) => response.json(songs));
+  // Song.find({}).then((songs) => response.json(songs));
+  console.log("Inside get Songs");
+  Fcmbook.find({}).then((songs) => response.json(songs));
+  /*
+  const fcmbook = new Fcmbook({
+    artist: "from node1",
+    album: "from node2",
+    vol: "fron node3"
+  });
+  fcmbook.save().then((result) => response.json(fcmbook));
+  */
 });
 
 songsRouter.post("/", (request, response) => {

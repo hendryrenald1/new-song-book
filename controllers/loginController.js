@@ -3,9 +3,6 @@ const bcrypt = require("bcrypt");
 const loginRouter = require("express").Router();
 
 loginRouter.post("/", (request, response) => {
-  console.log("Inside Post");
-  console.log(process.env.SECRET);
-  console.log(process.env.ADMIN_HASH);
   const pwdHash = process.env.ADMIN_HASH;
 
   return bcrypt

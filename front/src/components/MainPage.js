@@ -32,7 +32,6 @@ class MainPage extends Component {
       .catch((error) => console.log("error fetching songs from db"));
   };
   selectSong = (song) => {
-    console.log(song);
     this.props.history.push({
       pathname: "/selectedSong",
       state: { song: song },

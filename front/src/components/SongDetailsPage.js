@@ -1,55 +1,42 @@
 import React from "react";
 
-import { MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardBody } from "mdbreact";
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCardBody,
+  MDBCard,
+  MDBCardTitle,
+} from "mdbreact";
 const SongDetailsPage = (props) => {
-  let lyrics = props.location.state.song.lyrics.replace(
-    /(?:\r\n|\r|\n)/g,
-    "<br />"
-  );
+  //let title = props.location.state.song.title.English;
   return (
-    <MDBContainer className="mt-3 text-center">
-      <MDBRow>
-        <MDBCol>
-          <div className="mt-7">
-            <h5>
-              <strong> {props.location.state.song.name} </strong>
-            </h5>
-          </div>
+    <MDBContainer>
+      <MDBRow className="mt-4">
+        <MDBCol className="col-sm-6">
+          <MDBCard>
+            <MDBCardTitle className="text-center">
+              {props.location.state.song.title.Tamil}
+            </MDBCardTitle>
+            <MDBCardBody>
+              <pre>{props.location.state.song.lyrics.Tamil.text}</pre>
+            </MDBCardBody>
+          </MDBCard>
         </MDBCol>
-      </MDBRow>
-      {/* <div class="col-lg-8 d-none d-lg-block"></div> */}
-      {/* <MDBRow className="d-none d-sm-block d-md-none">
-        <MDBCol>
-          <h4>
-            {" "}
-            <strong> Tamil version </strong>
-          </h4>
-        </MDBCol>
-      </MDBRow> */}
 
-      <MDBRow>
-        <MDBCol>
-          <MDBCardBody>
-            <pre>{props.location.state.song.lyrics}</pre>
-          </MDBCardBody>
+        <MDBCol className="col-sm-6">
+          <MDBCard>
+            <MDBCardTitle className="text-center">
+              {props.location.state.song.title.English}
+            </MDBCardTitle>
+            <MDBCardBody>
+              <pre>{props.location.state.song.lyrics.English.text}</pre>
+            </MDBCardBody>
+          </MDBCard>
         </MDBCol>
-      </MDBRow>
-      {/* 
-        <MDBRow className="d-none d-sm-block d-md-none">
-          <MDBCol>
-            <h4> English version</h4>
-          </MDBCol>
-        </MDBRow>
 
-        <MDBCol md="6">
-          <MDBCardBody>
-            
-            <pre>{props.location.state.song.lyrics}</pre>
-          </MDBCardBody>
-        </MDBCol>
-      </MDBRow> */}
-      <MDBRow>
-        <MDBCol>
+        <MDBCol className="col-sm-12 text-center mt-2">
           <MDBBtn onClick={props.history.goBack} gradient="purple" rounded>
             Back
           </MDBBtn>
