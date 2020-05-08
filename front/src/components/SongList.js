@@ -46,10 +46,11 @@ class SongList extends React.Component {
           >
             <MDBCardBody key={song._id}>
               <MDBCardTitle>{song.title.Tamil}</MDBCardTitle>
-              <MDBCardText key={song._id}>
-                <h5 className="font-weight-bold blue-text">
-                  {song.title.English}
-                </h5>
+
+              <MDBCardText className="font-weight-bold blue-text">
+                {song.title.English}
+              </MDBCardText>
+              <MDBCardText>
                 <i key={song._id} className="mx-1 fas fa-microphone">
                   {song.artist}
                 </i>
