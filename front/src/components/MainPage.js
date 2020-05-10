@@ -6,6 +6,7 @@ import ".././index.css";
 import axios from "axios";
 import SongList from "./SongList";
 import SearchPage from "./SearchPage";
+import ScrollToTop from "./ScrollToTop";
 const apiUrl = "/api/songs";
 
 // const apiUrl = "https://fcm-song-book-demo.herokuapp.com/api/songs";
@@ -88,12 +89,14 @@ class MainPage extends Component {
           <div className="row">
             <div className="col">
               <ul className="list-group my-4">
-                <SongList
-                  songs={this.state.songs}
-                  search={this.state.search}
-                  selected={this.state.selected}
-                  selectSong={this.selectSong}
-                />
+                <ScrollToTop>
+                  <SongList
+                    songs={this.state.songs}
+                    search={this.state.search}
+                    selected={this.state.selected}
+                    selectSong={this.selectSong}
+                  />
+                </ScrollToTop>
               </ul>
             </div>
           </div>

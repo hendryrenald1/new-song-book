@@ -60,3 +60,13 @@ img.logo-navbar {
   border-radius: 10%;
   font-weight: bold;
 }
+
+.title-color {
+  color: #866c86;
+}
+
+.logo-text-cap {
+  font-weight: bold;
+  font-size: 25px;
+  color: #df8257;
+}

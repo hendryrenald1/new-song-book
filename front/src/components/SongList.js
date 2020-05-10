@@ -45,15 +45,22 @@ class SongList extends React.Component {
             onClick={() => this.props.selectSong(song)}
           >
             <MDBCardBody key={song._id}>
-              <MDBCardTitle>{song.title.Tamil}</MDBCardTitle>
+              <MDBCardTitle className="title-color">
+                {song.title.Tamil}
+              </MDBCardTitle>
 
-              <MDBCardText className="font-weight-bold blue-text">
+              <MDBCardTitle className="h5 blue-text">
                 {song.title.English}
-              </MDBCardText>
+              </MDBCardTitle>
+
+              {/* <MDBCardText className="font-weight-bold blue-text">
+                {song.title.English}
+              </MDBCardText> */}
+
               <MDBCardText>
                 <i key={song._id} className="mr-1 fas fa-microphone"></i>
                 {song.artist}
-                <i className="ml-3 fas fa-record-vinyl"> </i> {song.album}
+                <i className="ml-2 fas fa-record-vinyl"> </i> {song.album}
               </MDBCardText>
             </MDBCardBody>
           </MDBCard>

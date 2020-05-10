@@ -27,12 +27,15 @@ class NavbarPage extends Component {
             <img
               src="../../img/fcm-weblogo.png"
               href="#"
-              className="logo-navbar"
+              className="mr-2 logo-navbar"
               height="480px"
               alt=" FCM logo"
             />
           </Link>
-          <strong> விசுவாச கானங்கள் </strong>
+          {/* <strong> விசுவாச கானங்கள் </strong> */}
+          <span className="logo-text-cap">F</span>aith{" "}
+          <span className="logo-text-cap">C</span>hurch{" "}
+          <span className="logo-text-cap">M</span>inistries
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
