@@ -6,4 +6,4 @@ cp -r build ..
 cd ..
 git add .
 git commit -m "heroku deployment"
-git push heroku master
+git push -f heroku master
