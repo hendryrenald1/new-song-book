@@ -16,7 +16,7 @@ const SongDetailsPage = (props) => {
       <MDBRow className="mt-4">
         <MDBCol className="col-sm-6">
           <MDBCard>
-            <MDBCardTitle className="text-center">
+            <MDBCardTitle className="text-center mt-2">
               {props.location.state.song.title.Tamil}
             </MDBCardTitle>
             <MDBCardBody>
@@ -27,7 +27,7 @@ const SongDetailsPage = (props) => {
 
         <MDBCol className="col-sm-6">
           <MDBCard>
-            <MDBCardTitle className="text-center">
+            <MDBCardTitle className="text-center mt-2">
               {props.location.state.song.title.English}
             </MDBCardTitle>
             <MDBCardBody>
@@ -37,7 +37,12 @@ const SongDetailsPage = (props) => {
         </MDBCol>
 
         <MDBCol className="col-sm-12 text-center mt-2">
-          <MDBBtn onClick={props.history.goBack} gradient="purple" rounded>
+          <MDBBtn
+            className="btn-back"
+            onClick={props.history.goBack}
+            gradient="purple"
+            rounded
+          >
             Back
           </MDBBtn>
         </MDBCol>

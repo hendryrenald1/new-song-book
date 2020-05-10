@@ -20,7 +20,6 @@ const authError = (request) => {
 
 songsRouter.get("/", (request, response) => {
   // Song.find({}).then((songs) => response.json(songs));
-  console.log("Inside get Songs");
   Fcmbook.find({}).then((songs) => response.json(songs));
   /*
   const fcmbook = new Fcmbook({

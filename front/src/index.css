@@ -30,6 +30,10 @@ pre {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.search-text-background {
+  background-color: #0f0f0f8f;
+}
+
 /* .navbar-img {
   background: url("/img/fcm-weblogo.png" );
   height: 60px;
@@ -42,4 +46,17 @@ pre {
 img.logo-navbar {
   width: 2.5rem !important;
   height: 2.5rem !important;
+}
+
+.songSelect:hover {
+  cursor: pointer;
+}
+
+.searchInput {
+  max-width: 100%;
+}
+
+.btn-back {
+  border-radius: 10%;
+  font-weight: bold;
 }

@@ -9,7 +9,8 @@ class SearchPage extends React.Component {
       <>
         <MDBContainer>
           <MDBCol md="12">
-            <span className="d-block p-2 bg-dark">
+            {/* <span className="d-block p-2 bg-dark"> */}
+            <div className="d-block p-2 search-text-background">
               <input
                 type="text"
                 className="form-control form-control-lg "
@@ -17,7 +18,7 @@ class SearchPage extends React.Component {
                 placeholder="Search Songs...."
                 onChange={this.props.handleSearchChange}
               ></input>
-            </span>
+            </div>
             {/* <input
               className="form-control"
               type="text"
