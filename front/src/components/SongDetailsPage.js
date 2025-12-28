@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   MDBBtn,
   MDBContainer,
@@ -8,19 +8,32 @@ import {
   MDBCardBody,
   MDBCard,
   MDBCardTitle,
-} from "mdbreact";
-const SongDetailsPage = (props) => {
-  //let title = props.location.state.song.title.English;
+} from "mdb-react-ui-kit";
+
+const SongDetailsPage = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { song } = location.state || {};
+
+  if (!song) {
+    return (
+      <MDBContainer>
+        <p>No song selected</p>
+        <MDBBtn onClick={() => navigate("/")}>Go Back</MDBBtn>
+      </MDBContainer>
+    );
+  }
+
   return (
     <MDBContainer>
       <MDBRow className="mt-4">
         <MDBCol className="col-sm-6">
           <MDBCard>
             <MDBCardTitle className="text-center mt-2">
-              {props.location.state.song.title.Tamil}
+              {song.title.Tamil}
             </MDBCardTitle>
             <MDBCardBody>
-              <pre>{props.location.state.song.lyrics.Tamil.text}</pre>
+              <pre>{song.lyrics.Tamil.text}</pre>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -28,10 +41,10 @@ const SongDetailsPage = (props) => {
         <MDBCol className="col-sm-6">
           <MDBCard>
             <MDBCardTitle className="text-center mt-2">
-              {props.location.state.song.title.English}
+              {song.title.English}
             </MDBCardTitle>
             <MDBCardBody>
-              <pre>{props.location.state.song.lyrics.English.text}</pre>
+              <pre>{song.lyrics.English.text}</pre>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -39,8 +52,7 @@ const SongDetailsPage = (props) => {
         <MDBCol className="col-sm-12 text-center mt-2">
           <MDBBtn
             className="btn-back"
-            onClick={props.history.goBack}
-            gradient="purple"
+            onClick={() => navigate(-1)}
             rounded
           >
             Back

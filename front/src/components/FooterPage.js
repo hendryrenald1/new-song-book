@@ -1,9 +1,9 @@
 import React from "react";
-import { MDBContainer, MDBFooter } from "mdbreact";
+import { MDBContainer, MDBFooter } from "mdb-react-ui-kit";
 
 const FooterPage = () => {
   return (
-    <MDBFooter className="font-small  panel-footer sticky-footer">
+    <MDBFooter className="font-small panel-footer sticky-footer">
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}

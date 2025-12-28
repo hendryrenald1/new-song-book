@@ -1,27 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.cda7936e.chunk.css",
-    "main.js": "/static/js/main.5ede4016.chunk.js",
-    "main.js.map": "/static/js/main.5ede4016.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b0502ee1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b0502ee1.js.map",
-    "static/css/2.cef66f4a.chunk.css": "/static/css/2.cef66f4a.chunk.css",
-    "static/js/2.abfe0ff9.chunk.js": "/static/js/2.abfe0ff9.chunk.js",
-    "static/js/2.abfe0ff9.chunk.js.map": "/static/js/2.abfe0ff9.chunk.js.map",
+    "main.css": "/static/css/main.a784e784.css",
+    "main.js": "/static/js/main.1f283dfc.js",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/song-book-cover.jpg": "/static/media/song-book-cover.10fe525383bfc34da768.jpg",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/index.html",
-    "precache-manifest.be0b763c520ea27e18f00f73b4003a4b.js": "/precache-manifest.be0b763c520ea27e18f00f73b4003a4b.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.cef66f4a.chunk.css.map": "/static/css/2.cef66f4a.chunk.css.map",
-    "static/css/main.cda7936e.chunk.css.map": "/static/css/main.cda7936e.chunk.css.map",
-    "static/js/2.abfe0ff9.chunk.js.LICENSE.txt": "/static/js/2.abfe0ff9.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/static/media/arrow_right.8ef6a08c.svg",
-    "static/media/all.min.css": "/static/media/fa-solid-900.ec763292.svg"
+    "main.a784e784.css.map": "/static/css/main.a784e784.css.map",
+    "main.1f283dfc.js.map": "/static/js/main.1f283dfc.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.b0502ee1.js",
-    "static/css/2.cef66f4a.chunk.css",
-    "static/js/2.abfe0ff9.chunk.js",
-    "static/css/main.cda7936e.chunk.css",
-    "static/js/main.5ede4016.chunk.js"
+    "static/css/main.a784e784.css",
+    "static/js/main.1f283dfc.js"
   ]
 }

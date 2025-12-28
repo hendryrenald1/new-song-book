@@ -1,22 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 import MainPage from "./components/MainPage";
-import { Route } from "react-router-dom";
 import SongDetailsPage from "./components/SongDetailsPage";
 import NavbarPage from "./components/NavbarPage";
 import FooterPage from "./components/FooterPage";
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <NavbarPage />
-        <Route exact path="/" component={MainPage} />
-        <Route exact path="/selectedSong" component={SongDetailsPage} />
-        <FooterPage />
-      </>
-    );
-  }
+function App() {
+  return (
+    <>
+      <NavbarPage />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/selectedSong" element={<SongDetailsPage />} />
+      </Routes>
+      <FooterPage />
+    </>
+  );
 }
 
 export default App;
