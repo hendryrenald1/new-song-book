@@ -14,6 +14,7 @@ services:
       - SECRET=${SECRET}
     networks:
       - songbook-network
+      - web
     expose:
       - "3001"
 
@@ -23,13 +24,16 @@ services:
       dockerfile: Dockerfile
     container_name: songbook-frontend
     restart: unless-stopped
-    ports:
-      - "3000:80"
+    expose:
+      - "80"
     depends_on:
       - backend
     networks:
       - songbook-network
+      - web
 
 networks:
   songbook-network:
     driver: bridge
+  web:
+    external: true
